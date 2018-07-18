@@ -50,7 +50,7 @@ end="end tell"
 function nuclear() {
     while true; do
         for i in "${themes[@]}"; do
-            sleep .3
+            sleep .25
             osascript -e "$start" -e "$theme\"$i\"" -e "$end"
         done
     done
