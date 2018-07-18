@@ -59,9 +59,10 @@ function nuclear() {
 # # Write riddle answer for kill script alias
 echo -e '\n# cheshire says hello' >> ~/.bash_profile
 echo "alias mad='saveMe'" >> ~/.bash_profile
-echo $'function saveMe() { ps -ef | grep \"cheshire.sh\" | grep -v grep | awk \"{print $2}\" | xargs kill; }' >> ~/.bash_profile
-# echo $'function saveMe() { kill -9 `ps -u $USER | grep "cheshire.sh" | grep -v grep | cut -d\' \' -f 5`; }' >> ~/.bash_profile
-source ~/.bash_profile
+echo $'function saveMe() { kill -9 `ps -u $USER | grep "cheshire.sh" | grep -v grep | cut -d\' \' -f 5`; }' >> ~/.bash_profile
+
+# Need . to source bash_profile
+. ~/.bash_profile
 
 # Remove image & run thread in background
 rm $path
