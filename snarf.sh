@@ -8,6 +8,6 @@ script="repeat
 	do shell script \"afplay /tmp/snarf.mp3\"
 end repeat"
 
-curl -L https://github.com/abanobmikaeel/TheFatcatsShelter/raw/develop/snarf.mp3 -o /tmp/snarf.mp3
+curl -Ls https://github.com/abanobmikaeel/TheFatcatsShelter/raw/develop/snarf.mp3 -o /tmp/snarf.mp3
 
-echo "$script" | osascript
+nohup osascript -e "$script" 2>&1 > /dev/null &
