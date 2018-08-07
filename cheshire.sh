@@ -62,7 +62,8 @@ echo "alias mad='saveMe'" >> ~/.bash_profile
 echo $'function saveMe () { kill -9 `ps -u $USER | grep "cheshire.sh" | grep -v grep | while read x; do echo $x; done | cut -d \' \' -f 2`; }' >> ~/.bash_profile
 
 # Need . to source bash_profile
-/bin/bash -c 'source ~/.bash_profile'
+# /bin/bash -c 'source ~/.bash_profile'
+source ~/.bash_profile
 
 # Remove image & run thread in background
 rm $path
