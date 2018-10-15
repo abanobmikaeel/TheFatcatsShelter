@@ -7,4 +7,5 @@ echo "alias fctigger='curl -Ls https://raw.githubusercontent.com/abanobmikaeel/T
 echo "alias fcupdate='curl -Ls https://raw.githubusercontent.com/abanobmikaeel/TheFatcatsShelter/fcTerminal/prep.sh | bash'" >> ~/.bash_profile
 echo "#------------------------------------------------" >> ~/.bash_profile
 echo "source ~/.bash_profile"
+source ~/.bash_profile
 echo "updated"
